@@ -454,6 +454,7 @@
   <h1>Marcus</h1>
 
   <h2><small>Live Temp:</small> <span id="myelement"></span></h2>
+  <h2><small>Trip:</small> <span id="element2"></span></h2>
 
   <!--<small><a href="/xively-js/tutorial/">&larr; Back to Tutorial</a></small>-->
 
@@ -475,6 +476,7 @@
           datastreamID  = "Temperature";       // Datastream ID
           datastreamID2 = "Trip_Level";
           selector      = "#myelement";   // Your element on the page - takes any valid jQuery selector
+          selector      = "#element2";
 
       // Get datastream data from Xively
       xively.datastream.get (feedID, datastreamID, function ( datastream ) {
