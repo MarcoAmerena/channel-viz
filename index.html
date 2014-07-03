@@ -474,7 +474,7 @@
       // Replace with your own values
       var feedID        = 807643523,          // Feed ID (the last number on the URL on the feed page on Xively)
           datastreamID  = "Temperature";       // Datastream ID
-          selector      = "#myelement";   // Your element on the page - takes any valid jQuery selector
+          selector1      = "#myelement";   // Your element on the page - takes any valid jQuery selector
           datastreamID2 = "Trip_Level";
           selector2     = "#element2";
 
@@ -486,19 +486,15 @@
 
 
         // Display the current value from the datastream
-        $(selector).html( datastream["current_value"] );
+        $(selector1).html( datastream["current_value"] );
 
         // Getting realtime! The function associated with the subscribe method will be executed every time there is an update to the datastream
         xively.datastream.subscribe( feedID, datastreamID, function ( event , datastream_updated ) {
           // Display the current value from the updated datastream
-          $(selector).html( datastream_updated["current_value"] );
+          $(selector1).html( datastream_updated["current_value"] );
         });
         
-        xively.datastream.get (feedID, datastreamID2, function ( datastream ) {
-        $(selector2).html( datastream["current_value"] );
-	 xively.datastream.subscribe( feedID, datastreamID2, function ( event , datastream_updated ) {
-          $(selector2).html( datastream_updated["current_value"] );
-        });
+       
 
         
 
