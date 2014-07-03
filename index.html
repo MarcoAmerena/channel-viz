@@ -493,6 +493,14 @@
           // Display the current value from the updated datastream
           $(selector).html( datastream_updated["current_value"] );
         });
+        
+        xively.datastream.get (feedID, datastreamID2, function ( datastream ) {
+        $(selector2).html( datastream["current_value"] );
+	 xively.datastream.subscribe( feedID, datastreamID2, function ( event , datastream_updated ) {
+          $(selector2).html( datastream_updated["current_value"] );
+        });
+
+        
 
       });
 
