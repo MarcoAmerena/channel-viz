@@ -475,7 +475,8 @@
       var feedID        = 807643523,          // Feed ID (the last number on the URL on the feed page on Xively)
           datastreamID  = "Temperature";       // Datastream ID
           selector      = "#myelement";   // Your element on the page - takes any valid jQuery selector
-          datastreamID2 = "Trip_Level"
+          datastreamID2 = "Trip_Level";
+          selector2     = "#element2";
 
       // Get datastream data from Xively
       xively.datastream.get (feedID, datastreamID, function ( datastream ) {
