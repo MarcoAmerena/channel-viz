@@ -507,6 +507,25 @@ $(document).ready(function($)
       		$(selector2).html( datastream_updated["current_value"] );
       	});
       });
+      
+      xively.datastream.get (feedID, datastreamID3, function ( datastream ) 
+      {
+      	$(selector3).html( datastream["current_value"] );
+      	xively.datastream.subscribe( feedID, datastreamID3, function ( event , datastream_updated ) 
+      	{
+      		$(selector3).html( datastream_updated["current_value"] );
+      	});
+      });
+
+      xively.datastream.get (feedID, datastreamID4, function ( datastream ) 
+      {
+      	$(selector4).html( datastream["current_value"] );
+      	xively.datastream.subscribe( feedID, datastreamID4, function ( event , datastream_updated ) 
+      	{
+      		$(selector4).html( datastream_updated["current_value"] );
+      	});
+      });
+
 
       // WARNING: Code here will continue executing while we get the datastream data from Xively, use the function associated with datastream.get to work with the data, when the request is complete
 });
