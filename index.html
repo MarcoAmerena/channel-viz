@@ -481,11 +481,11 @@
       // Get datastream data from Xively
       xively.datastream.get (feedID, datastreamID, function ( datastream ) {
         // Display the current value from the datastream
-        $(selector1).html( datastream["current_value"] );
+        $(selector1).html( datastream["current_value1"] );
         // Getting realtime! The function associated with the subscribe method will be executed every time there is an update to the datastream
         xively.datastream.subscribe( feedID, datastreamID, function ( event , datastream_updated ) {
           // Display the current value from the updated datastream
-          $(selector1).html( datastream_updated["current_value"] );
+          $(selector1).html( datastream_updated["current_value1"] );
         });
         
 
