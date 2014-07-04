@@ -65,7 +65,7 @@ $(document).ready(function($)
           selector4 = "#element4";
 
       // Get datastream data from Xively
-      xively.datastream.get (feedID, datastreamID.slice(7), function ( datastream ) 
+      xively.datastream.get (feedID, datastreamID.slice(3), function ( datastream ) 
       {
       	// Display the current value from the datastream
       	$(selector1).html( datastream["current_value"] );
