@@ -453,8 +453,11 @@
 <body>
   <h1>Marcus</h1>
 
-  <h2><small>Live Temp:</small> <span id="myelement"></span></h2>
-  <h2><small>Trip:</small> <span id="element2"></span></h2>
+  <h2><small>Temperature:</small> <span id="element1"></span></h2>
+  <h2><small>Trip Level:</small> <span id="element2"></span></h2>
+  <h2><small>Hysteresis:</small> <span id="element3"></span></h2>
+  <h2><small>LED:</small> <span id="element4"></span></h2>
+  
 
   <!--<small><a href="/xively-js/tutorial/">&larr; Back to Tutorial</a></small>-->
 
@@ -475,9 +478,13 @@ $(document).ready(function($)
       // Replace with your own values
       var feedID        = 807643523,          // Feed ID (the last number on the URL on the feed page on Xively)
           datastreamID  = "Temperature";       // Datastream ID
-          selector1      = "#myelement";   // Your element on the page - takes any valid jQuery selector
+          selector1      = "#element1";   // Your element on the page - takes any valid jQuery selector
           datastreamID2 = "Trip_Level";
           selector2     = "#element2";
+          datastreamID3 = "";
+          selector3 = "";
+          datastream4 = "";
+          selector4 = "";
 
       // Get datastream data from Xively
       xively.datastream.get (feedID, datastreamID, function ( datastream ) 
