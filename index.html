@@ -26,7 +26,7 @@
 <div style="font-family:verdana;padding:20px;border-radius:20px;border:10px solid #660033;">
   <h1 style="background-color:white;">Sapphire Thermostat</h1>
 
-  <div><small>Temperature:</small> <span style="color:black" id="element1".toFixed(2)></span></div>
+  <div><small>Temperature:</small> <span style="color:black" id="element1"></span></div>
   <div><small>Trip Level:</small> <span style="color:black" id="element2"></span></div>
   <button type="button">+</button> 
   <button type="button">-</button> 
@@ -56,6 +56,7 @@ $(document).ready(function($)
       var feedID        = 807643523,          // Feed ID (the last number on the URL on the feed page on Xively)
           datastreamID  = "Temperature";       // Datastream ID
           selector1     = "#element1";   // Your element on the page - takes any valid jQuery selector
+          var Temp = "element1"
           datastreamID2 = "Trip_Level";
           selector2     = "#element2";
           datastreamID3 = "Hysteresis";
